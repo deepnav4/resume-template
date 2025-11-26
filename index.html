@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Patterson - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #2c2c2c;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .download-btn:hover {
+            background-color: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .page {
+            width: 21cm;
+            height: 29.7cm;
+            padding: 1.2cm 1.2cm 1.2cm 1.2cm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 1cm;
+        }
+
+        .header h1 {
+            font-size: 32pt;
+            font-weight: 300;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 10pt;
+            letter-spacing: 2px;
+            text-transform: none;
+            color: #333333;
+            font-weight: 400;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1.5px;
+            background-color: #cccccc;
+            margin: 0.3cm 0;
+        }
+
+        .content {
+            display: flex;
+            gap: 1cm;
+            flex-wrap: wrap;
+        }
+
+        .left-column {
+            flex: 0 0 7cm;
+        }
+
+        .right-column {
+            flex: 1;
+        }
+
+        .full-width-section {
+            width: 100%;
+            margin-top: -40px;
+        }
+
+        .section {
+            margin-bottom: 0.35cm;
+        }
+
+        
+
+        .section-title {
+            font-size: 11pt;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #000000;
+            margin-bottom: 0.3cm;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 4px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.25cm;
+            font-size: 9pt;
+            color: #333333;
+        }
+
+        .contact-item a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.25cm;
+        }
+
+        .profile-text {
+            font-size: 9.5pt;
+            color: #333333;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .skills-list {
+            margin-top: 0.3cm;
+        }
+
+        .skill-item {
+            margin-bottom: 0.35cm;
+        }
+
+        .skill-name {
+            font-size: 9.5pt;
+            color: #000000;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+            background-color: #e8e8e8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            background-color: #2c2c2c;
+        }
+
+        .education-item {
+            margin-bottom: 0.5cm;
+        }
+
+        .education-degree {
+            font-size: 10pt;
+            color: #000000;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .education-institution {
+            font-size: 9.5pt;
+            color: #333333;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+
+        .education-year {
+            font-size: 8.5pt;
+            color: #666666;
+            margin-bottom: 4px;
+            font-style: italic;
+        }
+
+        .education-description {
+            font-size: 9pt;
+            color: #333333;
+            line-height: 1.4;
+        }
+
+        .language-item {
+            margin-bottom: 0.25cm;
+        }
+
+        .language-name {
+            font-size: 8pt;
+            color: #000000;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+
+        .language-bar {
+            width: 100%;
+            height: 5px;
+            background-color: #e8e8e8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .language-bar-fill {
+            height: 100%;
+            background-color: #2c2c2c;
+        }
+
+        .work-experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-title {
+            font-size: 10.5pt;
+            color: #000000;
+            font-weight: 600;
+            margin-bottom: 0.1cm;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.15cm;
+        }
+
+        .company-name {
+            font-size: 9pt;
+            color: #333333;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .job-date {
+            font-size: 9pt;
+            color: #333333;
+            font-style: italic;
+        }
+
+        .job-responsibilities {
+            list-style-position: outside;
+            padding-left: 0.4cm;
+            margin: 0;
+        }
+
+        
+
+        .job-responsibilities li {
+            font-size: 9pt;
+            color: #333333;
+            margin-bottom: 0.06cm;
+            line-height: 1.35;
+        }
+
+        .job-responsibilities li a {
+            color: #551a8b;
+            text-decoration: none;
+        }
+
+        .job-responsibilities li a:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                width: 21cm;
+                height: 29.7cm;
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+
+        .header-contacts  a{
+            text-decoration: none;
+            font-size: 14px;
+            color: #551a8b;
+            /* font-style: italic; */
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" onclick="downloadPDF()">📥 Download as PDF</button>
+    
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <h1>Navdeep Singh</h1>
+            <div class="subtitle">Information Technology Student | NIT Jalandhar</div>
+            <div class="header-contacts">
+                <a href="tel:+919478619241">+91-9478619241</a>
+                <span class="separator">|</span>
+                <a href="mailto:workwithdeepnav@gmail.com">workwithdeepnav@gmail.com</a>
+                <span class="separator">|</span>
+                <a href="https://linkedin.com/in/navdeep-singh-1554a8321" target="_blank">LinkedIn</a>
+                <span class="separator">|</span>
+                <a href="https://github.com/deepnav4" target="_blank">GitHub</a>
+                <span class="separator">|</span>
+                <a href="https://navdeep-site.vercel.app" target="_blank">Portfolio</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Skills Section -->
+                <div class="section">
+                    <div class="section-title">Technical Skills</div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">Languages</div>
+                            <div style="font-size: 9pt; margin-bottom: 6px; color: #333333;">JavaScript, TypeScript, C++, Python</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Frontend</div>
+                            <div style="font-size: 9pt; margin-bottom: 6px; color: #333333;">React.js, Next.js, Tailwind CSS, Redux</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Backend</div>
+                            <div style="font-size: 9pt; margin-bottom: 6px; color: #333333;">Node.js, Express.js, Socket.io, REST APIs</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Databases</div>
+                            <div style="font-size: 9pt; margin-bottom: 6px; color: #333333;">MongoDB, PostgreSQL, Prisma, Redis</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">DevOps</div>
+                            <div style="font-size: 9pt; margin-bottom: 6px; color: #333333;">Docker, Kubernetes, NGINX, GitHub Actions, AWS EC2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="section">
+                    <div class="section-title">Education</div>
+                    <div class="education-item">
+                        <div class="education-degree">Bachelor of Technology</div>
+                        <div class="education-institution">NIT Jalandhar</div>
+                        <div class="education-year">Aug 2024 - Present</div>
+                        <div class="education-description">Information Technology, CGPA: 8.33</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-degree">CBSE Board</div>
+                        <div class="education-institution">Brahmrishi Mission School</div>
+                        <div class="education-year">Abohar, India</div>
+                        <div class="education-description">Class 12: 93.8% | Class 10: 85.8%</div>
+                    </div>
+                </div>
+
+                <!-- Achievements Section -->
+                <div class="section">
+                    <div class="section-title">Achievements</div>
+                    <div class="education-description" style="margin-bottom: 0.2cm;">
+                        • Contributed to NIT Jalandhar's Training & Placement website
+                    </div>
+                    <div class="education-description" style="margin-bottom: 0.2cm;">
+                    <div class="section-title">Technical Skills</div>
+                        • Contributed In 2 conference websites (<a href="https://it1dxpert.org" target="_blank" style="color: #551a8b; text-decoration: none;">it1dxpert.org</a>, <a  href="https://eaicnitj.com" target="_blank" style="color: #551a8b; text-decoration: none;">eaicnitj.com</a>)
+                    </div>
+                    <div class="education-description">
+                        • Solved 500+ problems on LeetCode
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Profile Section -->
+                <div class="section">
+                    <div class="section-title">Projects</div>
+                    
+                    <div class="work-experience-item">
+                        <div class="job-title">Gym-Management System</div>
+                        <div class="job-header">
+                            <div class="company-name">Docker, NGINX, GitHub Actions, Node.js, React</div>
+                            <div class="job-date"><a href="https://gym-manangment.vercel.app" style="color: #551a8b; text-decoration: none;">Live</a> | <a href="https://github.com/deepnav4/Gym-Manangment" style="color: #551a8b; text-decoration: none;">GitHub</a></div>
+                        </div>
+                        <ul class="job-responsibilities">
+                            <li>Designed and deployed a scalable gym management platform using a Dockerized microservices architecture.</li>
+                            <li>Implemented automated CI/CD workflows via GitHub Actions to streamline deployment.</li>
+                            <!-- <li>Configured NGINX as a reverse proxy and load balancer.</li> -->
+                            <li>Developed dashboards for members and trainers with real-time analytics.</li>
+                        </ul>
+                    </div>
+
+                    <div class="work-experience-item">
+                        <div class="job-title">SnippetSync</div>
+                        <div class="job-header">
+                            <div class="company-name">React, Node.js, Redis, Docker</div>
+                            <div class="job-date"><a href="https://snippet-sync-orpin.vercel.app" style="color: #551a8b; text-decoration: none;">Live</a> | <a href="https://github.com/deepnav4/snippetSync" style="color: #551a8b; text-decoration: none;">GitHub</a></div>
+                        </div>
+                        <ul class="job-responsibilities">
+                            <li>Developed a real-time collaborative code editor supporting live cursors and instant updates.</li>
+                            <li>Integrated Redis Pub/Sub to distribute events across scalable backend instances.</li>
+                            <li>Created a companion VS Code extension for syncing code edits from the IDE.</li>
+                        </ul>
+                    </div>
+
+                    <div class="work-experience-item">
+                        <div class="job-title">ExceliDraw</div>
+                        <div class="job-header">
+                            <div class="company-name">Canvas API, WebSockets, JavaScript</div>
+                            <div class="job-date"><a href="https://github.com/deepnav4/turborepo-draw-app" style="color: #551a8b; text-decoration: none;">GitHub</a></div>
+                        </div>
+                        <ul class="job-responsibilities">
+                            <li>Implemented a collaborative whiteboard from scratch using pure Canvas API.</li>
+                            <li>Built multi-user real-time sync, undo/redo operations, and object transform features.</li>
+                            <li>Optimized rendering to maintain 60fps smooth drawing for concurrent users.</li>
+                        </ul>
+                    </div>
+
+                    <div class="work-experience-item">
+                        <div class="job-title">RideShare</div>
+                        <div class="job-header">
+                            <div class="company-name">MERN, Maps API, JWT</div>
+                            <div class="job-date"><a href="https://ride-share-nine.vercel.app" style="color: #551a8b; text-decoration: none;">Live</a> | <a href="https://github.com/thedevsumit/RideShare" style="color: #551a8b; text-decoration: none;">GitHub</a></div>
+                        </div>
+                        <ul class="job-responsibilities">
+                            <li>Built a full-stack ride booking platform integrating Google Maps for real-time location tracking.</li>
+                            <li>Implemented JWT authentication and secure route-based access control.</li>
+                        </ul>
+                    </div>
+
+                    <div class="work-experience-item">
+                        <div class="job-title">ChatApp</div>
+                        <div class="job-header">
+                            <div class="company-name">Socket.io, Express.js, React</div>
+                            <div class="job-date"><a href="https://real-time-chat-liard.vercel.app" style="color: #551a8b; text-decoration: none;">Live</a> | <a href="https://github.com/deepnav4/chat-app" style="color: #551a8b; text-decoration: none;">GitHub</a></div>
+                        </div>
+                        <ul class="job-responsibilities">
+                            <li>Created a real-time chat platform supporting group/private messaging.</li>
+                            <li>Implemented typing indicator, online status and persistent chat storage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership Section - Full Width -->
+            <div class="full-width-section">
+                <!-- <div class="divider"></div> -->
+                <div class="section">
+                    <div class="section-title">Leadership & Activities</div>
+                    <div style="display: block;">
+                        <div class="profile-text" style="margin-bottom: 0.2cm;">
+                            <strong>Core Member, CyberNauts & XCEED Technical Clubs:</strong> Organized technical workshops, mentored 50+ juniors in web development, and contributed to NIT Jalandhar's web infrastructure projects.
+                        </div>
+                        <div class="profile-text">
+                            <strong>Volunteer, NSS:</strong> Participated in campus social impact projects and community service initiatives.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            window.print();
+        }
+    </script>
+</body>
+</html>

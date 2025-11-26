@@ -1,0 +1,145 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fontawesome5} % For icons if available, otherwise we'll fallback to text
+\usepackage{lmodern} % Better fonts
+
+% Define colors
+\definecolor{primary}{RGB}{0, 51, 102} % Dark Blue
+\definecolor{secondary}{RGB}{51, 51, 51} % Dark Gray
+\definecolor{accent}{RGB}{0, 102, 204} % Link Blue
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=primary,
+    pdfborder={0 0 0}
+}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries\color{primary}\uppercase}{}{0em}{}[\vspace{-3pt}\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+%================ HEADER ================%
+\begin{center}
+    {\Huge \textbf{Navdeep Singh}} \\ \vspace{5pt}
+    \small \href{mailto:workwithdeepnav@gmail.com}{\color{secondary} workwithdeepnav@gmail.com} \ $|$ \ 
+    \small +91-9478619241 \ $|$ \ 
+    \small \href{https://linkedin.com/in/navdeep-singh-1554a8321}{\color{accent} LinkedIn} \ $|$ \ 
+    \small \href{https://github.com/deepnav4}{\color{accent} GitHub} \ $|$ \ 
+    \small \href{https://navdeep-site.vercel.app}{\color{accent} Portfolio} \\ \vspace{2pt}
+    \small Abohar, Punjab, India
+\end{center}
+
+%=============== EDUCATION ===============%
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+      {Dr. B. R. Ambedkar National Institute of Technology (NIT)}{Jalandhar, India}
+      {Bachelor of Technology in Information Technology; CGPA: 8.33}{Aug 2024 -- Present}
+    \resumeSubheading
+      {Brahmrishi Mission School}{Abohar, India}
+      {CBSE Board (Class 12: 93.8\% | Class 10: 85.8\%)}{}
+\end{itemize}
+
+%=============== TECHNICAL SKILLS ===============%
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages \& Core:} \hspace{2mm} JavaScript (ES6+), TypeScript, HTML5, CSS3, C++, Python \\
+     \vspace{2pt}
+     \textbf{Frontend:} \hspace{12mm} React.js, Next.js, Tailwind CSS, Redux, Figma \\
+     \vspace{2pt}
+     \textbf{Backend:} \hspace{13mm} Node.js, Express.js, WebSockets (Socket.io), REST APIs \\
+     \vspace{2pt}
+     \textbf{Databases:} \hspace{10mm} MongoDB, PostgreSQL, Prisma ORM, Redis \\
+     \vspace{2pt}
+     \textbf{DevOps \& Tools:} \hspace{4mm} Docker, Kubernetes, NGINX, GitHub Actions (CI/CD), Git, AWS (EC2)
+    }}
+\end{itemize}
+
+%=============== PROJECTS ===============%
+%=============== PROJECTS ===============%
+\section{Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+
+    \resumeProjectHeading
+      {\href{https://github.com/deepnav4/Gym-Manangment}{\color{accent} GitHub} $|$ \textbf{Gym-Management System} $|$ \emph{Docker, NGINX, GitHub Actions, Node.js, React}}{}
+      \resumeItem{Designed and deployed a scalable gym management platform using a \textbf{Dockerized microservices architecture}.}
+      \resumeItem{Implemented automated \textbf{CI/CD workflows} via GitHub Actions to streamline deployment.}
+      \resumeItem{Configured \textbf{NGINX} as a reverse proxy and load balancer.}
+      \resumeItem{Developed dashboards for members and trainers with real-time analytics.}\\
+\noindent\makebox[\linewidth]{\color{secondary}{\tiny\dotfill}}
+
+    \resumeProjectHeading
+      {\href{https://snippet-sync-orpin.vercel.app}{\color{accent} Live} $|$ \href{https://github.com/deepnav4/snippetSync}{\color{accent} GitHub} $|$ \textbf{SnippetSync} $|$ \emph{React, Node.js, Redis, Docker}}{}
+      \resumeItem{Developed a real-time collaborative code editor supporting live cursors and instant updates.}
+      \resumeItem{Integrated \textbf{Redis Pub/Sub} to distribute events across scalable backend instances.}
+      \resumeItem{Created a companion \textbf{VS Code extension} for syncing code edits from the IDE.}\\
+\noindent\makebox[\linewidth]{\color{secondary}{\tiny\dotfill}}
+
+
+    \resumeProjectHeading
+      {\href{https://github.com/deepnav4/turborepo-draw-app}{\color{accent} GitHub} $|$ \textbf{ExceliDraw} $|$ \emph{Canvas API, WebSockets, JavaScript}}{}
+      \resumeItem{Implemented a collaborative whiteboard from scratch using \textbf{pure Canvas API}.}
+      \resumeItem{Built multi-user real-time sync, undo/redo operations, and object transform features.}
+      \resumeItem{Optimized rendering to maintain \textbf{60fps smooth drawing} for concurrent users.}\\
+\noindent\makebox[\linewidth]{\color{secondary}{\tiny\dotfill}}
+
+    \resumeProjectHeading
+      {\href{https://ride-share-nine.vercel.app}{\color{accent} Live} $|$ \href{https://github.com/thedevsumit/RideShare}{\color{accent} GitHub} $|$ \textbf{RideShare} $|$ \emph{MERN, Maps API, JWT}}{}
+      \resumeItem{Built a full-stack ride booking platform integrating \textbf{Google Maps} for real-time location tracking.}
+      \resumeItem{Implemented \textbf{JWT authentication} and secure route-based access control.}\\
+\noindent\makebox[\linewidth]{\color{secondary}{\tiny\dotfill}}
+    \resumeProjectHeading
+      {\href{https://real-time-chat-liard.vercel.app}{\color{accent} Live} $|$ \href{https://github.com/deepnav4/chat-app}{\color{accent} GitHub} $|$ \textbf{ChatApp} $|$ \emph{Socket.io, Express.js, React}}{}
+      \resumeItem{Created a real-time chat platform supporting group/private messaging.}
+      \resumeItem{Implemented typing indicator, online status and persistent chat storage.}
+\\
+\noindent\makebox[\linewidth]{\color{secondary}{\tiny\dotfill}}
+
+\end{itemize}
+
+%=============== ACHIEVEMENTS ===============%
+%=============== ACHIEVEMENTS ===============%
+\section{Achievements \& Contributions}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeItem{\textbf{Web Development:} Contributed to the official \textbf{Training and Placement Cell} website and developed \textbf{2 conference websites} for the XCEED team
+    — \href{https://it1dxpert.org}{\color{accent}it1dxpert.org} \ | \ \href{https://eaicnitj.com}{\color{accent}eaicnitj.com}.}
+    
+    \resumeItem{\textbf{Competitive Programming:} Solved \textbf{500+ problems} on LeetCode, demonstrating proficiency in Data Structures and Algorithms.}
+\end{itemize}
+
+
+%=============== LEADERSHIP & ACTIVITIES ===============%
+\section{Leadership \& Activities}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeItem{\textbf{Core Member, CyberNauts Technical Club:} Organized technical workshops and mentored 50+ juniors in web development.}
+    \resumeItem{\textbf{Volunteer, NSS:} Participated in campus social impact projects and community service initiatives.}
+\end{itemize}
+
+\end{document}
